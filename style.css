@@ -13,13 +13,16 @@ a {
   padding: 10px 20px;
   font-size: 30px;
   font-weight: 100;
+  background-color: #13293a;
   color: #fff;
-  position: fixed;
-  float: right;
+}
+
+.site-title:hover{
+    color: #ff7300;
 }
 
 .navbar {
-  background-color: #13293a;
+  background-color: #fff;
   font-size: 18px;
   line-height: 22px;
 }
@@ -31,4 +34,24 @@ a {
 
 .navitem {
   display: inline-block;
+}
+
+a {
+  color: #13293a;
+}
+
+a:hover,
+a:focus {
+    color: #ff7300;
+}
+
+.navlink a {
+  padding: 8px 10px;
+  display: inline-block;
+}
+
+.login-button {
+    float: right;
+    padding-right: 20px;
+    padding-top: 5px;
 }
