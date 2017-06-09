@@ -35,7 +35,7 @@ h5 {
 }
 
 .navbar {
-  background-color: #525564;
+  background-color: #393b46;
   font-size: 18px;
   line-height: 22px;
 }
@@ -75,7 +75,7 @@ h5 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #525564;
+    border: 2px solid #393b46;
 }
 
 .image-source {
@@ -104,7 +104,7 @@ h5 {
     position: fixed;
     bottom: 0px;
     left: 5%;
-    background-color: #525564;
+    background-color: #393b46;
 }
 
 .user-image-container {
@@ -112,8 +112,8 @@ h5 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #525554;
-    margin: 0px;
+    border: 2px solid #74828f;
+    margin-bottom: 0px;
 }
 
 .user-image {
@@ -125,14 +125,18 @@ h5 {
 
 .user-image-container-size {
     float: left;
-    margin: 5px 5px 5px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 5%;
 }
 
 #text-input {
-    width: 80%;
-    height: 90%;
-    background-color: rgb(157, 165, 171);
-    border: 1px solid rgba(19, 41, 58, 0);
+    width: 85%;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #74828f;
+    border: 1px solid #393b46;
 }
 
 .text-input-element {
@@ -157,4 +161,10 @@ h5 {
 #text-input::-moz-placeholder {
   font-family: 'Open Sans', sans-serif;
   color: rgba(19, 41, 58, 0.76);
+}
+
+#post-button {
+    float: right;
+    height: 50px;
+    width: 5%;
 }
