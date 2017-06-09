@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background-color: #74828f;
+  background-color: #BEB9B5;
 }
 
 a {
@@ -97,7 +97,8 @@ h5 {
 }
 
 .text-input-box {
-    display: block;
+  border: 2px solid #74828f;
+    display: flex;
     width: 75%;
     height: 50px;
     margin: 0px;
@@ -107,7 +108,12 @@ h5 {
     background-color: #393b46;
 }
 
-.user-image-container {
+.footer-image-container-size {
+    float: left;
+    margin: 3px
+}
+
+.footer-image-container {
     overflow: hidden;
     width: 40px;
     height: 40px;
@@ -116,38 +122,40 @@ h5 {
     margin-bottom: 0px;
 }
 
-.user-image {
+.footer-image {
     width: 40px;
     height: 40px;
     top: 50%;
     left: 50%;
 }
 
-.user-image-container-size {
-    float: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 5%;
-}
-
 #text-input {
-    width: 85%;
-    height: 35px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: #74828f;
-    border: 1px solid #393b46;
+    flex: auto;
+    min-width: none;
+    max-width: none;
+    height: 48px;
+    margin: 0px;
+    background-color: #393b46;
+    border: none;
+    border-left: 2px solid #525564;
+    border-right: 2px solid #525564;
 }
 
-.text-input-element {
-    margin: 0;
+#text-input:focus {
+    background-color: inherit;
+    outline: none;
+    color: #c25b56;
 }
+
+/*.text-input-element {
+    margin: 0;
+}*/
 
 #text-input::-webkit-input-placeholder {
   font-family: 'Open Sans', sans-serif;
-  color: rgba(19, 41, 58, 0.76);
+  color: #c25b56  ;
 }
-
+/*
 #text-input:-ms-input-placeholder {
   font-family: 'Open Sans', sans-serif;
   color: rgba(19, 41, 58, 0.76);
@@ -162,12 +170,25 @@ h5 {
   font-family: 'Open Sans', sans-serif;
   color: rgba(19, 41, 58, 0.76);
 }
-
+*/
 #post-button {
     float: right;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    color: #c25b56;
     height: 50px;
-    width: 5%;
+    width: 50px;
 }
+
+#post-button:hover {
+  color: white;
+}
+
+#post-button:focus {
+  outline: none;
+}
+
 /*The login.html */
 #empty-space {
 	position: fixed;
@@ -195,7 +216,7 @@ h5 {
   min-height: 300px;
   margin: 40px auto;
   background-color: #13293a;
-  
+
 }
 
 .modal-header {
