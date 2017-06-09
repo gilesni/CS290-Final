@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background-color: rgba(19, 41, 58, 0.76);
+  background-color: #74828f;
 }
 
 a {
@@ -11,7 +11,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #ff7300;
+  color: #c25b56;
 }
 
 p {
@@ -27,16 +27,15 @@ h5 {
   padding: 10px 20px;
   font-size: 30px;
   font-weight: 100;
-  background-color: #13293a;
   color: #fff;
 }
 
 .site-title:hover{
-    color: #ff7300;
+    color: #c25b56;
 }
 
 .navbar {
-  background-color: #13293a;
+  background-color: #525564;
   font-size: 18px;
   line-height: 22px;
 }
@@ -65,28 +64,28 @@ h5 {
 .user-post {
     margin-top: 20px;
     margin-left: 5%;
-    max-width: 70%;
-    border-top: 2px solid #ff7300;
+    max-width: 75%;
+    border-top: 2px solid #c25b56;
     min-height: 70px;
 }
 
-.user-image-container {
+.image-container {
     position: relative;
     overflow: hidden;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #13293a;
+    border: 2px solid #525564;
 }
 
-.user-image {
+.image-source {
     width: 50px;
     height: 50px;
     top: 50%;
     left: 50%;
 }
 
-.user-image-container-size {
+.image-container-size {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
@@ -97,15 +96,47 @@ h5 {
     margin-bottom:5px;
 }
 
-.text-input-element {
-    padding-left: 5%;
-    margin-bottom: 50px;
+.text-input-box {
+    display: block;
+    width: 75%;
+    height: 50px;
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
+    background-color: #525564;
+}
+
+.user-image-container {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #525554;
+    margin: 0px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+}
+
+.user-image-container-size {
+    float: left;
+    margin: 5px 5px 5px 5px;
 }
 
 #text-input {
-    width: 75%;
+    width: 80%;
+    height: 90%;
     background-color: rgb(157, 165, 171);
     border: 1px solid rgba(19, 41, 58, 0);
+}
+
+.text-input-element {
+    margin: 0;
 }
 
 #text-input::-webkit-input-placeholder {
