@@ -1,8 +1,7 @@
-
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background-color: rgba(19, 41, 58, 0.76);
+  background-color: #BEB9B5;
 }
 
 a {
@@ -12,7 +11,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #ff7300;
+  color: #c25b56;
 }
 
 p {
@@ -28,16 +27,15 @@ h5 {
   padding: 10px 20px;
   font-size: 30px;
   font-weight: 100;
-  background-color: #13293a;
   color: #fff;
 }
 
 .site-title:hover{
-    color: #ff7300;
+    color: #c25b56;
 }
 
 .navbar {
-  background-color: #13293a;
+  background-color: #393b46;
   font-size: 18px;
   line-height: 22px;
 }
@@ -66,28 +64,28 @@ h5 {
 .user-post {
     margin-top: 20px;
     margin-left: 5%;
-    max-width: 70%;
-    border-top: 2px solid #ff7300;
+    max-width: 75%;
+    border-top: 2px solid #c25b56;
     min-height: 70px;
 }
 
-.user-image-container {
+.image-container {
     position: relative;
     overflow: hidden;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #13293a;
+    border: 2px solid #393b46;
 }
 
-.user-image {
+.image-source {
     width: 50px;
     height: 50px;
     top: 50%;
     left: 50%;
 }
 
-.user-image-container-size {
+.image-container-size {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
@@ -98,22 +96,66 @@ h5 {
     margin-bottom:5px;
 }
 
-.text-input-element {
-    padding-left: 5%;
-    margin-bottom: 50px;
+.text-input-box {
+  border: 2px solid #74828f;
+    display: flex;
+    width: 75%;
+    height: 50px;
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
+    background-color: #393b46;
+}
+
+.footer-image-container-size {
+    float: left;
+    margin: 3px
+}
+
+.footer-image-container {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #74828f;
+    margin-bottom: 0px;
+}
+
+.footer-image {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
 }
 
 #text-input {
-    width: 75%;
-    background-color: rgb(157, 165, 171);
-    border: 1px solid rgba(19, 41, 58, 0);
+    flex: auto;
+    min-width: none;
+    max-width: none;
+    height: 48px;
+    margin: 0px;
+    background-color: #393b46;
+    border: none;
+    border-left: 2px solid #525564;
+    border-right: 2px solid #525564;
 }
+
+#text-input:focus {
+    background-color: inherit;
+    outline: none;
+    color: #c25b56;
+}
+
+/*.text-input-element {
+    margin: 0;
+}*/
 
 #text-input::-webkit-input-placeholder {
   font-family: 'Open Sans', sans-serif;
-  color: rgba(19, 41, 58, 0.76);
+  color: #c25b56  ;
 }
-
+/*
 #text-input:-ms-input-placeholder {
   font-family: 'Open Sans', sans-serif;
   color: rgba(19, 41, 58, 0.76);
@@ -128,74 +170,113 @@ h5 {
   font-family: 'Open Sans', sans-serif;
   color: rgba(19, 41, 58, 0.76);
 }
-
-.headtitle {
-    text-align: left;
-    font-size: 30px;
-    font-weight: 900;
-    margin: inherit;
-    display: inline-flex;
+*/
+#post-button {
+    float: right;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    color: #c25b56;
+    height: 50px;
+    width: 50px;
 }
 
-#login-input {
-    width: 300px;
-    display: inline-flex;
-    background-color: rgb(157, 165, 171);
-    border: 2px solid rgba(0,0,0,.25);
-    padding: 15px;
+#post-button:hover {
+  color: white;
 }
 
-.login-info{
-    list-style: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    float: left;
-    padding: 0px;
-    /*margin: 0px 0px 0px 30px;*/
+#post-button:focus {
+  outline: none;
 }
 
-.litext {
-    margin: 10px 5px 10px 0px;
-    display: flex;
+/*The login.html */
+#empty-space {
+	position: fixed;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	  right: 0;
+	 z-index: 1000;
+	 background-color: rgba(0, 0, 0, 0.85);
 }
-.login-item {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 0px 0px 10px 0px;
-    float: left;
+#login-modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1010;
+	overflow: scroll;
 }
-.make-container {
-    display: inline-block;
-    position: relative;
-    width: 500px;
-    background-color: rgb(220,220,220);
-    padding: 50px 20px 50px 20px;
-    margin: 20px 0px 0px 33%;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px rgba(0,0,0,.25);
+
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #13293a;
+
 }
-.create-buttons {
-    position: absolute;
-    bottom: 20px;
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
 }
-.confirm-button {
-    background: rgb(157, 165, 171);
-    border: 2px solid rgba(0,0,0,.25);
-    border-radius: 5px;
-    width: 120px;
-    height: 30px;
+
+.modal-header h1 {
+	margin: 0;
+	font-size: 34px;
 }
-.cancel-create {
-    background: rgb(157, 165, 171);
-    border: 2px solid rgba(0,0,0,.25);
-    border-radius: 5px;
-    width: 120px;
-    height: 30px;
+
+.modal-body {
+  padding: 20px;
 }
-.confirm-button:hover {
-    background: rgba(19, 41, 58, 0.76);
+
+.login-input-element {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
 }
-.cancel-create:hover {
-    background: rgba(19, 41, 58, 0.76);
+
+.login-input-element label {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.login-input-element input {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #aaa;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+.modal-footer button {
+  font-size: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.modal-footer .modal-login-button:hover {
+  background-color: #eee;
+}
+
+.modal-footer .modal-create-account-button {
+  background-color: #c25b56;
+  color: #fff;
 }
