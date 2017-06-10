@@ -280,3 +280,75 @@ h5 {
   background-color: #c25b56;
   color: #fff;
 }
+
+
+.headtitle {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 900;
+    margin: inherit;
+    display: inline-flex;
+}
+
+#login-input {
+    width: 300px;
+    display: inline-flex;
+    background-color: rgb(157, 165, 171);
+    border: 2px solid rgba(0,0,0,.25);
+    padding: 15px;
+}
+
+.login-info{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    float: left;
+    padding: 0px;
+    /*margin: 0px 0px 0px 30px;*/
+}
+
+.litext {
+    margin: 10px 5px 10px 0px;
+    display: flex;
+}
+.login-item {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 0px;
+    float: left;
+}
+.make-container {
+    display: inline-block;
+    position: relative;
+    width: 500px;
+    background-color: rgb(220,220,220);
+    padding: 50px 20px 50px 20px;
+    margin: 20px 0px 0px 33%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,.25);
+}
+.create-buttons {
+    position: absolute;
+    bottom: 20px;
+}
+.confirm-button {
+    background: rgb(157, 165, 171);
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+}
+.cancel-create {
+    background: rgb(157, 165, 171);
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+}
+.confirm-button:hover {
+    background: rgba(19, 41, 58, 0.76);
+}
+.cancel-create:hover {
+    background: rgba(19, 41, 58, 0.76);
+}
