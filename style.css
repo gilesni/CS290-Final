@@ -276,10 +276,11 @@ h5 {
 }
 
 .modal-footer .modal-login-button:hover {
-  background-color: #eee;
+  background-color: #c25b56;
+  color: #fff;
 }
 
-.modal-footer .modal-create-account-button {
+.modal-footer .modal-create-account-button:hover {
   background-color: #c25b56;
   color: #fff;
 }
