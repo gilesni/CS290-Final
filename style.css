@@ -131,7 +131,6 @@ h5 {
 
 #text-input {
     flex: auto;
-    min-width: none;
     max-width: none;
     height: 48px;
     margin: 0px;
@@ -187,6 +186,10 @@ h5 {
 
 #post-button:focus {
   outline: none;
+}
+
+.text-container{
+    padding-bottom: 
 }
 
 /*The login.html */
