@@ -5,7 +5,7 @@ body {
   overflow: hidden;
 }
 
-.hidden {
+hidden {
 	display: none;
 }
 
@@ -72,10 +72,9 @@ h5 {
     overflow-y: auto;
     width: 90%;
     max-height: 100%;
-    bottom: 45px;
+    bottom: 50px;
     top: 66px;
     position: absolute;
-    /*height: -webkit-calc(100% - 45px);*/
 }
 
 .user-post {
@@ -117,7 +116,6 @@ h5 {
     /*border: 2px solid #74828f;*/
     display: flex;
     width: 90%;
-    height: 45px;
     margin: 0px;
     position: absolute;
     bottom: 0px;
@@ -223,13 +221,7 @@ h5 {
 
 /*The login.html */
 #empty-space {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-	background-color: rgba(0, 0, 0, 0.85);
+
 }
 #login-modal {
 	position: fixed;
