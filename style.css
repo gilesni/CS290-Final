@@ -5,7 +5,7 @@ body {
   overflow: hidden;
 }
 
-hidden {
+.hidden {
 	display: none;
 }
 
@@ -73,9 +73,10 @@ h5 {
 
     width: 90%;
     max-height: 100%;
-    bottom: 50px;
+    bottom: 45px;
     top: 66px;
     position: absolute;
+    /*height: -webkit-calc(100% - 45px);*/
 }
 
 .user-post {
@@ -117,6 +118,7 @@ h5 {
     /*border: 2px solid #74828f;*/
     display: flex;
     width: 90%;
+    height: 45px;
     margin: 0px;
     position: absolute;
     bottom: 0px;
@@ -149,8 +151,9 @@ h5 {
     flex: auto;
     overflow: scroll;
     max-width: none;
-    height: 50px;
+    height: 43px;
     margin: 0px;
+    padding: 0px 0px 2px 0px;
     background-color: #393b46;
     border: none;
     border-left: 2px solid #525564;
@@ -222,7 +225,13 @@ h5 {
 
 /*The login.html */
 #empty-space {
-
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.85);
 }
 #login-modal {
 	position: fixed;
