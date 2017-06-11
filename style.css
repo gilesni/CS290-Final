@@ -104,7 +104,7 @@ h5 {
     width: 84%;
     height: 50px;
     margin: 0px;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     left: 5%;
     background-color: #393b46;
@@ -203,7 +203,6 @@ h5 {
 }
 
 .scroll-box {
-    padding-bottom: 50px;
     overflow: scroll;
     width: 90%;
     max-height: 85%;
