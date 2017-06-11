@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   background-color: #BEB9B5;
-
+  overflow: hidden;
 }
 
 a {
@@ -63,6 +63,14 @@ h5 {
     padding-top: 5px;
 }
 
+.scroll-box {
+    flex: auto;
+    overflow-y: scroll;
+    width: 90%;
+    max-height: 85%;
+    position: absolute;
+}
+
 .user-post {
     margin-top: 20px;
     margin-left: 5%;
@@ -99,9 +107,9 @@ h5 {
 }
 
 .text-input-box {
-    border: 2px solid #74828f;
+    /*border: 2px solid #74828f;*/
     display: flex;
-    width: 84%;
+    width: 90%;
     height: 45px;
     margin: 0px;
     position: absolute;
@@ -134,7 +142,7 @@ h5 {
 #text-input {
     flex: auto;
     max-width: none;
-    height: 48px;
+    /*height: 48px;*/
     margin: 0px;
     background-color: #393b46;
     border: none;
@@ -173,9 +181,10 @@ h5 {
 }
 */
 #post-button {
+    border: none;
+    border-right: 2px solid #525564;
     float: right;
     background: none;
-    border: none;
     font-size: xx-large;
     color: #c25b56;
     height: 50px;
@@ -202,16 +211,11 @@ h5 {
     margin: 0px;
 }
 
-.scroll-box {
-    overflow: scroll;
-    width: 90%;
-    max-height: 85%;
-    position: absolute;
-}
+
 
 /*The login.html */
 #empty-space {
-	
+
 }
 #login-modal {
 	position: fixed;
@@ -375,4 +379,3 @@ h5 {
     cursor: pointer;
     background-color: #c25b56;
 }
-
