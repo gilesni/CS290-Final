@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   background-color: #BEB9B5;
-  overflow: hidden;
+
 }
 
 .hidden {
@@ -70,6 +70,7 @@ h5 {
 .scroll-box {
     flex: auto;
     overflow-y: auto;
+
     width: 90%;
     max-height: 85%;
     position: absolute;
