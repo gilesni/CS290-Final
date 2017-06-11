@@ -28,7 +28,7 @@
         "text": "Movies is now open"
       }
     ]
-  }
+  },
   "shows": {
     "name": "Shows",
     "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Media%20Tv%20show.png",
@@ -38,7 +38,7 @@
         "text": "Shows is now open"
       }
     ]
-  }
+  },
   "video-games": {
     "name": "Video Games",
     "photo": "https://cdn2.iconfinder.com/data/icons/minimal-set-three/32/minimal-64-512.png",
@@ -48,7 +48,7 @@
         "text": "Video Games is now open"
       }
     ]
-  }
+  },
   "board-games": {
     "name": "Board Games",
     "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Gaming%20Dice.png",
