@@ -131,7 +131,6 @@ h5 {
 
 #text-input {
     flex: auto;
-    min-width: none;
     max-width: none;
     height: 48px;
     margin: 0px;
