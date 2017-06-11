@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   background-color: #BEB9B5;
+
 }
 
 a {
@@ -38,6 +39,7 @@ h5 {
   background-color: #393b46;
   font-size: 18px;
   line-height: 22px;
+  height: 10%;
 }
 
 .navlist {
@@ -64,7 +66,7 @@ h5 {
 .user-post {
     margin-top: 20px;
     margin-left: 5%;
-    max-width: 75%;
+    max-width: 85%;
     border-top: 2px solid #c25b56;
     min-height: 70px;
 }
@@ -97,9 +99,9 @@ h5 {
 }
 
 .text-input-box {
-  border: 2px solid #74828f;
+    border: 2px solid #74828f;
     display: flex;
-    width: 75%;
+    width: 84%;
     height: 50px;
     margin: 0px;
     position: fixed;
@@ -188,6 +190,26 @@ h5 {
   outline: none;
 }
 
+.groups-sidebar {
+    float: right;
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    display: block;
+    background-color: #393b46;
+    width: 10%;
+    height: 95%;
+    margin: 0px;
+}
+
+.scroll-box {
+    padding-bottom: 50px;
+    overflow: scroll;
+    width: 90%;
+    max-height: 85%;
+    position: absolute;
+}
+
 /*The login.html */
 #empty-space {
 	
@@ -236,7 +258,7 @@ h5 {
 
 .login-input-element label {
   font-weight: 600;
-  flex: 1 75px;
+  flex: 1 85px;
   margin-right: 10px;
   color: #fff;
 }
