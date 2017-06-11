@@ -5,6 +5,10 @@ body {
   overflow: hidden;
 }
 
+hidden {
+	display: none;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -296,87 +300,4 @@ h5 {
   color: #fff;
 }
 
-.modal-footer .modal-create-account-button:hover {
-  background-color: #c25b56;
-  color: #fff;
-}
-
-
-.headtitle {
-    text-align: left;
-    font-size: 30px;
-    font-weight: 900;
-    margin: inherit;
-    display: inline-flex;
-    color: white;
-}
-
-#login-input {
-    width: 300px;
-    display: inline-flex;
-    background-color: white;
-    border: 2px solid rgba(0,0,0,.25);
-    padding: 15px;
-}
-
-#login-input:focus {
-  color: #c25b56 ;
-}
-
-.login-info{
-    list-style: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    float: left;
-    padding: 0px;
-    /*margin: 0px 0px 0px 30px;*/
-}
-
-.litext {
-    margin: 5px 5px 5px 0px;
-    display: flex;
-    color: white;
-}
-.login-item {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 0px 0px 10px 0px;
-    float: left;
-}
-.make-container {
-    display: inline-block;
-    position: relative;
-    width: 500px;
-    background-color: #393b46;
-    padding: 50px 20px 50px 20px;
-    margin: 5px 0px 0px 33%;
-    border-radius: 1px;
-    box-shadow: 10px 10px 5px rgba(0,0,0,.25);
-}
-.create-buttons {
-    position: absolute;
-    bottom: 20px;
-}
-.confirm-button {
-    background-color: white;
-    border: 2px solid rgba(0,0,0,.25);
-    border-radius: 5px;
-    width: 135px;
-    height: 35px;
-}
-.cancel-create {
-    background-color: white;
-    border: 2px solid rgba(0,0,0,.25);
-    border-radius: 5px;
-    width: 100px;
-    height: 35px;
-}
-.confirm-button:hover {
-    cursor: pointer;
-    background-color: #c25b56;
-}
-.cancel-create:hover {
-    cursor: pointer;
-    background-color: #c25b56;
-}
+/* */

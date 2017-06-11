@@ -20,7 +20,8 @@
                     <li class= "navitem navlink"><a href="#"><h1 class="site-title"><i class="fa fa-users" aria-hidden="true"></i> 290 Final</h1></a></li>
                     <li class="navitem navlink"><a href="#">People</a></li>
                     <li class="navitem navlink"><a href="#">Groups</a></li>
-                    <li class="navitem login-button"><a href="/accounts/login"><i class="fa fa-id-badge" aria-hidden="true"></i> Check In</a></li>
+                    <li class="navitem login-button"><button id="check-in-button"> <i class="fa fa-id-badge" aria-hidden="true"></i> Check In</button></li>
+                    <li class="hidden navitem name-button"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
                 </ul>
             </nav>
         </header>
@@ -139,6 +140,28 @@
                 <i class="fa fa-angle-double-up" aria-hidden="true"></i>
             </button>
         </footer>
+
+
+		<div id="empty-space" class= "hidden"></div>
+		<div id="login-modal" class= "hidden">
+			<div class="modal-dialog">
+
+				<div class="modal-header">
+					<h1>Login</h1>
+				</div>
+				<div class="modal-body">
+					<div class="login-input-element">
+						<label for="login-account-input">Account</label>
+						<input type="text" id="login-account-input">
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="modal-login-button">Accept</button>
+					
+				</div>
+			</div>
+		</div>
 
     </body>
 </html>
