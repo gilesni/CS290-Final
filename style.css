@@ -102,11 +102,11 @@ h5 {
     border: 2px solid #74828f;
     display: flex;
     width: 84%;
-    height: 50px;
+    height: 45px;
     margin: 0px;
     position: absolute;
     bottom: 0px;
-    left: 5%;
+    float: left;
     background-color: #393b46;
 }
 
