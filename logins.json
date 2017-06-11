@@ -1,6 +1,62 @@
-[
-	{
-		"Account": "panda",
-		"Password": "12345"
-	}
-]
+{
+  "general": {
+    "name": "General",
+    "photo": "https://s-media-cache-ak0.pinimg.com/236x/f8/2f/59/f82f5916dfb1370c8375654408fdc450.jpg",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "General is now open"
+      }
+    ]
+  },
+  "news": {
+    "name": "News",
+    "photo": "http://www.megaicons.net/static/img/icons_sizes/8/60/256/media-news-icon.png",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "News is now open"
+      }
+    ]
+  },
+  "movies": {
+    "name": "Movies",
+    "photo": "http://megaicons.net/static/img/icons_sizes/8/60/256/movie-genres-documentary-icon.png",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Movies is now open"
+      }
+    ]
+  }
+  "shows": {
+    "name": "Shows",
+    "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Media%20Tv%20show.png",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Shows is now open"
+      }
+    ]
+  }
+  "video-games": {
+    "name": "Video Games",
+    "photo": "https://cdn2.iconfinder.com/data/icons/minimal-set-three/32/minimal-64-512.png",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Video Games is now open"
+      }
+    ]
+  }
+  "board-games": {
+    "name": "Board Games",
+    "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Gaming%20Dice.png",
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Board Games is now open"
+      }
+    ]
+  }
+}
