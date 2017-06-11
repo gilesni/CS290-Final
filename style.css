@@ -141,6 +141,7 @@ h5 {
 
 #text-input {
     flex: auto;
+    overflow: scroll;
     max-width: none;
     /*height: 48px;*/
     margin: 0px;
