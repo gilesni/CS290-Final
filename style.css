@@ -72,8 +72,11 @@ h5 {
     overflow-y: auto;
 
     width: 90%;
-    max-height: 85%;
+    max-height: 100%;
+    bottom: 45px;
+    top: 66px;
     position: absolute;
+    /*height: -webkit-calc(100% - 45px);*/
 }
 
 .user-post {
