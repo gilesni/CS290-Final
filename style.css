@@ -131,7 +131,6 @@ h5 {
 
 #text-input {
     flex: auto;
-    min-width: none;
     max-width: none;
     height: 48px;
     margin: 0px;
@@ -191,17 +190,11 @@ h5 {
 
 /*The login.html */
 #empty-space {
-	position: fixed;
-	 top: 0;
-	 bottom: 0;
-	 left: 0;
-	  right: 0;
-	 z-index: 1000;
-	 background-color: rgba(0, 0, 0, 0.85);
+	
 }
 #login-modal {
 	position: fixed;
-	top: 0;
+	top: 30px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -273,10 +266,11 @@ h5 {
 }
 
 .modal-footer .modal-login-button:hover {
-  background-color: #eee;
+  background-color: #c25b56;
+  color: #fff;
 }
 
-.modal-footer .modal-create-account-button {
+.modal-footer .modal-create-account-button:hover {
   background-color: #c25b56;
   color: #fff;
 }
