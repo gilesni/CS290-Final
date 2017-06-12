@@ -10,6 +10,11 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', function (req, res, next) {
+    next();
+})
+
+
 app.get('/:group', function (req, res, next) {
     console.log("== url params for request:", req.params);
     var group = req.params.group;
@@ -26,11 +31,6 @@ app.get('/:group', function (req, res, next) {
     }
 });
 
-app.get('*', function (req, res) {
-    res.status(404)
-    res.render('404Page')
-});
-
 app.get('/groups/:group', function (req, res, next) {
 	console.log("== url params for request:", req.params);
 	var group = req.params.group;
@@ -45,6 +45,10 @@ app.get('/groups/:group', function (req, res, next) {
 	} else {
 		next();
 	}
+});
+
+app.get('*', function (req, res) {
+    res.status(404).render('404Page');
 });
 
 var port = process.env.PORT || 3000
