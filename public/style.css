@@ -60,21 +60,36 @@ h5 {
   display: inline-block;
 }
 
-.login-button {
-    margin-top: 20px;
+.check-in-button {
+    padding: 15px;
+    padding-top: 26px;
+    display: inline-block;
     float: right;
-    padding-right: 20px;
-    padding-top: 5px;
+}
+
+#check-in-button {
+    border: none;
+    float: right;
+    background: none;
+    font-size: 18px;
+    color: white;
+}
+
+#check-in-button:hover {
+  color: #c25b56;
+}
+
+#check-in-button:focus {
+  outline: none;
 }
 
 .scroll-box {
     flex: auto;
     overflow-y: auto;
-
-    width: 90%;
     max-height: 100%;
     bottom: 45px;
     top: 66px;
+    right: 100px;
     position: absolute;
     /*height: -webkit-calc(100% - 45px);*/
 }
@@ -85,6 +100,12 @@ h5 {
     max-width: 85%;
     border-top: 2px solid #c25b56;
     min-height: 70px;
+}
+
+.image-container-size {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 .image-container {
@@ -103,21 +124,65 @@ h5 {
     left: 50%;
 }
 
-.image-container-size {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-}
-
 .user-name {
     margin-top: 5px;
     margin-bottom:5px;
 }
 
+.groups-sidebar {
+    float: right;
+    position: absolute;
+    border-top: 2px solid #525564;
+    top: 66px;
+    right: 0px;
+    display: block;
+    background-color: #393b46;
+    width: 100px;
+    height: 95%;
+    margin: 0px;
+}
+
+.group-bubbles-container {
+    display: inline-flex;
+    width: 100px;
+    height: 95%;
+    margin: 0px;
+}
+
+.group-post {
+  width: 100px;
+  height: 100px;
+  padding: 0px;
+  border: 0px;
+  padding-top: 8px;
+}
+
+#group-post {
+  background: none;
+}
+
+.group-image {
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.group-name {
+  font-size: 15px;
+  color: black;
+  /*border: none;*/
+}
+
 .text-input-box {
     /*border: 2px solid #74828f;*/
     display: flex;
-    width: 90%;
+    /*width: 100%;*/
+    right: 100px;
+    left: 0px;
     height: 45px;
     margin: 0px;
     position: absolute;
@@ -207,17 +272,6 @@ h5 {
   outline: none;
 }
 
-.groups-sidebar {
-    float: right;
-    position: absolute;
-    top: 66px;
-    right: 0px;
-    display: block;
-    background-color: #393b46;
-    width: 10%;
-    height: 95%;
-    margin: 0px;
-}
 
 
 
