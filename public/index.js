@@ -18,13 +18,53 @@ function closeNameModal() {
     modalBackdrop.classList.add('hidden');
     nameModal.classList.add('hidden');
 
+    var loginInput = document.getElementById('login-account-input');
+    loginInput.value = '';
+}
+
+function acceptName() {
+    var nameArr = ['Emma', 'Olivia', 'Ava', 'Sophia', 'Isabella', 'Mia', 'Amelia', 'Charlotte', 'Harper', 'Aria', 'Ella', 'Abigail', 'Evelyn', 'Avery', 'Emily', 'Madison', 'Scarlett', 'Sofia', 'Mila', 'Riley', 'Lily', 'Chloe', 'Layla', 'Ellie', 'Grace', 'Zoey', 'Aubrey', 'Elizabeth', 'Penelope', 'Hannah', 'Victoria', 'Nora', 'Stella', 'Luna', 'Addison', 'Lillian', 'Skylar', 'Natalie', 'Maya', 'Paisley', 'Savannah', 'Hazel', 'Lucy', 'Bella', 'Camila', 'Brooklyn', 'Audrey', 'Aaliyah', 'Aurora', 'Leah', 'Zoe', 'Elena', 'Anna', 'Violet', 'Claire', 'Eva', 'Kennedy', 'Eleanor', 'Hailey', 'Kinsley', 'Sophie', 'Emilia', 'Maria', 'Alice', 'Madelyn', 'Aubree', 'Gabriella', 'Adeline', 'Sarah', 'Ariana', 'Serenity', 'Arianna', 'Sadie', 'Eliana', 'Clara', 'Isabelle', 'Peyton', 'Caroline', 'Piper', 'Julia', 'Kaylee', 'Naomi', 'Gianna', 'Willow', 'Reagan', 'Autumn', 'Rylee', 'Nevaeh', 'Quinn', 'Valentina', 'Everly', 'Alexa', 'Samantha', 'Mackenzie', 'Brielle', 'Ruby', 'Isla', 'Madeline', 'Cora', 'Taylor', 'Emery', 'Ivy', 'Nova', 'Delilah', 'Melanie', 'Athena', 'Lydia', 'Natalia', 'Leilani', 'Arya', 'Jade', 'Kylie', 'Allison', 'Charlie', 'Lilly', 'Bailey', 'Nur', 'Annabelle', 'Faith', 'Adalyn', 'Norah', 'Hadley', 'Laila', 'Alyssa', 'Sara', 'Liliana', 'Genesis', 'Adalynn', 'Alexis', 'Alexandra', 'Raelynn', 'Jasmine', 'Princess', 'Vivian', 'Kayla', 'Ariel', 'Isabel', 'Eden', 'Lyla', 'Jordyn', 'Lauren', 'Payton', 'London', 'Melody', 'Ana', 'Katherine', 'Arabella', 'Iris', 'Mya', 'Ryleigh', 'Teagan', 'Alina', 'Aliyah', 'Rose', 'Trinity', 'Adaline', 'Morgan', 'Gracie', 'Josie', 'Khloe', 'Eliza', 'Callie', 'Zara', 'Finley', 'Brianna', 'Alaina', 'Londyn', 'Maggie', 'Sydney', 'Anastasia', 'Juliana', 'Paige', 'Elise', 'Mckenzie', 'Presley', 'Adriana', 'Harley', 'Amara', 'Amaya', 'Harmony', 'Emerson', 'Freya', 'Jocelyn', 'Mary', 'Abby', 'Molly', 'Sienna', 'Cecilia', 'Kendall', 'Josephine', 'Laura', 'Marley', 'Maryam', 'Summer', 'Nina', 'Andrea', 'Ayla', 'Evie', 'Angel', 'Eloise', 'Liam', 'Noah', 'Mason', 'Lucas', 'Oliver', 'Ethan', 'Elijah', 'Logan', 'Aiden', 'James', 'Benjamin', 'Jackson', 'Carter', 'Jacob', 'Sebastian', 'Alexander', 'Michael', 'Matthew', 'Luke', 'Jack', 'Jayden', 'Wyatt', 'Daniel', 'Gabriel', 'William', 'Grayson', 'Henry', 'Owen', 'Jaxon', 'Levi', 'Ryan', 'Julian', 'Lincoln', 'Isaiah', 'David', 'Adam', 'Josiah', 'Joseph', 'Samuel', 'Eli', 'Isaac', 'Nathan', 'John', 'Caleb', 'Andrew', 'Leo', 'Dylan', 'Joshua', 'Muhammad', 'Anthony', 'Hunter', 'Connor', 'Christian', 'Asher', 'Adrian', 'Aaron', 'Landon', 'Christopher', 'Mateo', 'Cameron', 'Brayden', 'Easton', 'Jeremiah', 'Ezra', 'Jordan', 'Hudson', 'Greyson', 'Jace', 'Thomas', 'Nolan', 'Max', 'Bryson', 'Nicholas', 'Charlie', 'Dominic', 'Evan', 'Xavier', 'Jaxson', 'Colton', 'Austin', 'Carson', 'Ayden', 'Kayden', 'Gavin', 'Elias', 'Maverick', 'Cooper', 'Jonathan', 'Chase', 'Ezekiel', 'Kai', 'Luca', 'Bentley', 'Santiago', 'Alex', 'Parker', 'Tyler', 'Robert', 'Roman', 'Tristan', 'Ian', 'King', 'Jason', 'Micah', 'Miles', 'Harrison', 'Theodore', 'Jameson', 'Zachary', 'Declan', 'Leonardo', 'Sawyer', 'Ryder', 'Damian', 'Finn', 'Vincent', 'Braxton', 'Cole', 'Maddox', 'Silas', 'Everett', 'Jude', 'Weston', 'Kaiden', 'Ali', 'Jayce', 'Blake', 'Theo', 'Charles', 'George', 'Nathaniel', 'Matteo', 'Xander', 'Wesley', 'Ashton', 'Emmett', 'Eric', 'Kingston', 'Ryker', 'Axel', 'Giovanni', 'Camden', 'Omar', 'Abel', 'Brandon', 'Amir', 'Bennett', 'Avery', 'Elliott', 'Rowan', 'Hayden', 'Jax', 'Angel', 'Calvin', 'Brantley', 'Zayden', 'Mohammed', 'Bryce', 'Ivan', 'Justin', 'Karter', 'Lorenzo', 'Elliot', 'Kevin', 'Maxwell', 'Brody', 'Zane', 'Diego', 'Zion', 'Antonio', 'Jose', 'Beau', 'Jonah', 'Malachi', 'Aidan', 'Marcus', 'Dawson', 'Luis', 'Carlos', 'Prince', 'Kaleb', 'Miguel', 'Ben', 'Dean', 'Enzo', 'Lukas', 'Tucker', 'Sam', 'Aj', 'Caden', 'Kaden', 'Grant', 'Paxton', 'Patrick', 'Little', 'Messiah', 'Riley', 'Sean', 'Waylon', 'Jake']
+    var name = '';
+
+    var loginInput = document.getElementById('login-account-input');
+    if (loginInput.value == '') {
+        var randNum = Math.floor((Math.random() * 199) + 0);
+        name = nameArr[randNum];
+    }
+    else {
+        name = loginInput.value;
+    }
+
+    var checkInButton = document.getElementsByClassName('check-in-button');
+    checkInButton[0].classList.remove('navitem');
+    checkInButton[0].classList.add('navitem-hidden');
+
+    var nameButton = document.getElementById('name-button');
+    if (nameButton.textContent) {
+        nameButton.lastChild.textContent = name;
+    }
+    else {
+        var nameContent = document.createTextNode(name);
+        nameButton.appendChild(nameContent);
+    }
+
+    var nameClass = document.getElementsByClassName('name-button');
+    nameClass[0].classList.remove('navitem-hidden');
+    nameClass[0].classList.add('navitem');
+
+    closeNameModal();
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-    var nameArr = [Emma, Liam, Olivia, Noah, Ava, Mason, Sophia, Lucas, Isabella, Oliver, Mia, Ethan, Amelia, Elijah, Charlotte, Logan, Harper, Aiden, Aria, James, Ella, Benjamin, Abigail, Jackson, Evelyn, Carter, Avery, Jacob, Emily, Sebastian, Madison, Alexander, Scarlett, Michael, Sofia, Matthew, Mila, Luke, Riley, Jack, Lily, Jayden, Chloe, Wyatt, Layla, Daniel, Ellie, Gabriel, Grace, William, Zoey, Grayson, Aubrey, Henry, Elizabeth, Owen, Penelope, Jaxon, Hannah, Levi, Victoria, Ryan, Nora, Julian, Stella, Lincoln, Luna, Isaiah, Addison, David, Lillian, Adam, Skylar, Josiah, Natalie, Joseph, Maya, Samuel, Paisley, Eli, Savannah, Isaac, Hazel, Nathan, Lucy, John, Bella, Caleb, Camila, Andrew, Brooklyn, Leo, Audrey, Dylan, Aaliyah, Joshua, Aurora, Muhammad, Leah, Anthony, Zoe, Hunter, Elena, Connor, Anna, Christian, Violet, Asher, Claire, Adrian, Eva, Aaron, Kennedy, Landon, Eleanor, Christopher, Hailey, Mateo, Kinsley, Cameron, Sophie, Brayden, Emilia, Easton, Maria, Jeremiah, Alice, Ezra, Madelyn, Jordan, Aubree, Hudson, Gabriella, Greyson, Adeline, Jace, Sarah, Thomas, Ariana, Nolan, Serenity, Max, Arianna, Bryson, Sadie, Nicholas, Eliana, Charlie, Clara, Dominic, Isabelle, Evan, Peyton, Xavier, Caroline, Jaxson, Piper, Colton, Julia, Austin, Kaylee, Carson, Naomi, Ayden, Gianna, Kayden, Willow, Gavin, Reagan, Elias, Autumn, Maverick, Rylee, Cooper, Nevaeh, Jonathan, Quinn, Chase, Valentina, Ezekiel, Everly, Kai, Alexa, Luca, Samantha, Bentley, Mackenzie, Santiago, Brielle, Alex, Ruby, Parker, Isla, Tyler, Madeline, Robert, Cora, Roman, Taylor, Tristan, Emery, Ian, Ivy, King, Nova, Jason, Delilah, Micah, Melanie, Miles, Athena, Harrison, Lydia, Theodore, Natalia, Jameson, Leilani, Zachary, Arya, Declan, Jade, Leonardo, Kylie, Sawyer, Allison, Ryder, Charlie, Damian, Lilly, Finn, Bailey, Vincent, Nur, Braxton, Annabelle, Cole, Faith, Maddox, Adalyn, Silas, Norah, Everett, Hadley, Jude, Laila, Weston, Alyssa, Kaiden, Sara, Ali, Liliana, Jayce, Genesis, Blake, Adalynn, Theo, Alexis, Charles, Alexandra, George, Raelynn, Nathaniel, Jasmine, Matteo, Princess, Xander, Vivian, Wesley, Kayla, Ashton, Ariel, Emmett, Isabel, Eric, Eden, Kingston, Lyla, Ryker, Jordyn, Axel, Lauren, Giovanni, Payton, Camden, London, Omar, Melody, Abel, Ana, Brandon, Katherine, Amir, Arabella, Bennett, Iris, Avery, Mya, Elliott, Ryleigh, Rowan, Teagan, Hayden, Alina, Jax, Aliyah, Angel, Rose, Calvin, Trinity, Brantley, Adaline, Zayden, Morgan, Mohammed, Gracie, Bryce, Josie, Ivan, Khloe, Justin, Eliza, Karter, Callie, Lorenzo, Zara, Elliot, Finley, Kevin, Brianna, Maxwell, Alaina, Brody, Londyn, Zane, Maggie, Diego, Sydney, Zion, Anastasia, Antonio, Juliana, Jose, Paige, Beau, Elise, Jonah, Mckenzie, Malachi, Presley, Aidan, Adriana, Marcus, Harley, Dawson, Amara, Luis, Amaya, Carlos, Harmony, Prince, Emerson, Kaleb, Freya, Miguel, Jocelyn, Ben, Mary, Dean, Abby, Enzo, Molly, Lukas, Sienna, Tucker, Cecilia, Sam, Kendall, Aj, Josephine, Caden, Laura, Kaden, Marley, Grant, Maryam, Paxton, Summer, Patrick, Nina, Stephen, Andrea, Messiah, Ayla, Riley, Evie, Sean, Angel, Waylon, Eloise, Jake];
     var name = "Anonymous";
     var checkInButton = document.getElementById('check-in-button');
     checkInButton.addEventListener('click', showNameModal);
-
-
+    var nameButton = document.getElementById('name-button');
+    nameButton.addEventListener('click', showNameModal);
+    var modalCloseButton = document.getElementsByClassName('modal-close-button');
+    modalCloseButton[0].addEventListener('click', closeNameModal);
+    var modalCancelButton = document.getElementsByClassName('modal-cancel-button');
+    modalCancelButton[0].addEventListener('click', closeNameModal);
+    var modalLoginButton = document.getElementsByClassName('modal-login-button');
+    modalLoginButton[0].addEventListener('click', acceptName);
 });
