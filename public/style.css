@@ -55,6 +55,10 @@ h5 {
   display: inline-block;
 }
 
+.navitem-hidden {
+    display: none;
+}
+
 .navlink a {
   padding: 8px 10px;
   display: inline-block;
@@ -63,7 +67,6 @@ h5 {
 .check-in-button {
     padding: 15px;
     padding-top: 26px;
-    display: inline-block;
     float: right;
 }
 
@@ -77,9 +80,33 @@ h5 {
 
 #check-in-button:hover {
   color: #c25b56;
+  cursor: pointer;
 }
 
 #check-in-button:focus {
+  outline: none;
+}
+
+.name-button {
+    padding: 15px;
+    padding-top: 26px;
+    float: right;
+}
+
+#name-button {
+    border: none;
+    float: right;
+    background: none;
+    font-size: 18px;
+    color: white;
+}
+
+#name-button:hover {
+  color: #c25b56;
+  cursor: pointer;
+}
+
+#name-button:focus {
   outline: none;
 }
 
