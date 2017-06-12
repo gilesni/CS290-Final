@@ -2,6 +2,7 @@
   "general": {
     "name": "General",
     "photo": "https://s-media-cache-ak0.pinimg.com/236x/f8/2f/59/f82f5916dfb1370c8375654408fdc450.jpg",
+    "url": "/general",
     "posts": [
       {
         "user": "The Developers",
@@ -12,6 +13,7 @@
   "news": {
     "name": "News",
     "photo": "http://www.megaicons.net/static/img/icons_sizes/8/60/256/media-news-icon.png",
+    "url": "/news",
     "posts": [
       {
         "user": "The Developers",
@@ -22,6 +24,7 @@
   "movies": {
     "name": "Movies",
     "photo": "http://megaicons.net/static/img/icons_sizes/8/60/256/movie-genres-documentary-icon.png",
+    "url":  "/movies",
     "posts": [
       {
         "user": "The Developers",
@@ -32,6 +35,7 @@
   "shows": {
     "name": "Shows",
     "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Media%20Tv%20show.png",
+    "url": "/shows",
     "posts": [
       {
         "user": "The Developers",
@@ -42,6 +46,7 @@
   "video-games": {
     "name": "Video Games",
     "photo": "https://cdn2.iconfinder.com/data/icons/minimal-set-three/32/minimal-64-512.png",
+    "url": "/video-games",
     "posts": [
       {
         "user": "The Developers",
@@ -52,6 +57,7 @@
   "board-games": {
     "name": "Board Games",
     "photo": "http://icons.veryicon.com/png/System/iOS7%20Minimal/Gaming%20Dice.png",
+    "url": "board-games",
     "posts": [
       {
         "user": "The Developers",
