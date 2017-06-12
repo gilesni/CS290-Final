@@ -28,7 +28,8 @@ function acceptName() {
 
     var loginInput = document.getElementById('login-account-input');
     if (loginInput.value == '') {
-        var randNum = Math.floor((Math.random() * 199) + 0);
+        var randNum = Math.floor((Math.random() * 399) + 0);
+        console.log("== RANDOM NUMBER: ", randNum);
         name = nameArr[randNum];
     }
     else {
