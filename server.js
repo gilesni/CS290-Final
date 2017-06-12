@@ -3,7 +3,8 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var twitData = require('./groups.json');
-var sampleData = require('./sample.json')
+var sampleData = require('./sample.json');
+var groupData = require('./groups.json');
 var app = express();
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -21,6 +22,22 @@ app.get('/', function (req, res, next) {
 app.get('*', function (req, res) {
     res.status(404)
     res.render('404Page')
+});
+
+app.get('/groups/:group', function (req, res, next) {
+	console.log("== url params for request:", req.params);
+	var group = req.params.group;
+	var grupData = groupData[group];
+	if (grupData) {
+		var templateArgs = {
+			name: grupData.name,
+			photo: grupData.photo,
+			posts: grupData.posts
+		}
+		res.render('???', templateArgs);
+	} else {
+		next();
+	}
 });
 
 var port = process.env.PORT || 3000
