@@ -21,10 +21,10 @@
                     <li class="navitem navlink"><a href="#">People</a></li>
                     <li class="navitem navlink"><a href="#">Groups</a></li>
 
-                    <li class="navitem-hidden check-in-button"><button id="check-in-button"> <i class="fa fa-id-badge" aria-hidden="true"></i> Check In</button></li>
+                    <li class="navitem check-in-button"><button id="check-in-button"> <i class="fa fa-id-badge" aria-hidden="true"></i> Check In</button></li>
 
-                    <li class="navitem name-button"><button id="name-button"><i class="fa fa-user-circle" aria-hidden="true"></i>Kenneth</button></li>
-                </ul>
+                    <li class="navitem-hidden name-button"><button id="name-button"><i class="fa fa-user-circle" aria-hidden="true"></i></button></li>
+                </ul>  
             </nav>
         </header>
 
@@ -33,7 +33,7 @@
                 <article class="user-post">
                     <div class="image-container-size">
                         <div class="image-container">
-                            <img class="image-source" src="https://s-media-cache-ak0.pinimg.com/736x/2f/b7/dc/2fb7dc3e5cb7b12b454aa1bfdf45573f.jpg" />
+                            <img class="image-source" src="https://cdn4.iconfinder.com/data/icons/rounded-white-basic-ui/139/Profile01-RoundedWhite-512.png" />
                         </div>
                     </div>
                     <div class="user-name">
@@ -120,7 +120,7 @@
 
             <div class="group-bubbles-container">
                 <button class="group-post" id="group-post">
-                      <img class="group-image" src="https://s-media-cache-ak0.pinimg.com/736x/2f/b7/dc/2fb7dc3e5cb7b12b454aa1bfdf45573f.jpg" />
+                      <img class="group-image" src="https://cdn4.iconfinder.com/data/icons/rounded-white-basic-ui/139/Profile01-RoundedWhite-512.png" />
                       <a class="group-name">General</a>
                   </button>
             </div>
@@ -146,6 +146,7 @@
 
 				<div class="modal-header">
 					<h1>Login</h1>
+                    <button type="button" class="modal-close-button">&times;</button>
 				</div>
 				<div class="modal-body">
 					<div class="login-input-element">
@@ -155,8 +156,8 @@
 				</div>
 
 				<div class="modal-footer">
+                    <button type="button" class="modal-cancel-button">Cancel</button>
 					<button type="button" class="modal-login-button">Accept</button>
-
 				</div>
 			</div>
 		</div>

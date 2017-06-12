@@ -1,6 +1,17 @@
 {{> header}}
+
 <main class="scroll-box">
     {{#each Epost}}
-        {{> message}}
+        {{> post}}
     {{/each}}
 </main>
+
+<aside>
+    {{#each Egroup}}
+        {{> group}}
+    {{/each}}
+</aside>
+
+<footer>
+    {{> footer}}
+</footer>
