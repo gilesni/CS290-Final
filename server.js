@@ -2,7 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
-var groupData = require('./groups.json');
+var groupPosts = require('./groupPosts.json');
+var groupData = require('./groupData.json');
 var app = express();
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -18,12 +19,12 @@ app.get('/', function (req, res, next) {
 app.get('/:group', function (req, res, next) {
     console.log("== url params for request:", req.params);
     var group = req.params.group;
-    var grupData = groupData[group];
-    if (grupData) {
+    var postData = groupPosts[group];
+    if (postData) {
         var templateArgs = {
-            Epost: grupData.posts,
-            Egroup: grupData,
-            title: "CS 290 Final - " + grupData.name
+            groupPost: postData.posts,
+            groupInfo: groupData,
+            title: "CS 290 Final - " + group
         };
         res.render('mainPage', templateArgs);
     } else {
