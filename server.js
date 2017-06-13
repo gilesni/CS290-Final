@@ -14,18 +14,18 @@ app.get('/', function (req, res, next) {
     next();
 })
 
-
+/
 app.get('/:group', function (req, res, next) {
     console.log("== url params for request:", req.params);
     var group = req.params.group;
-    var postData = groupData[group];
-    if (groupData) {
+    var grupData = groupData[group];
+    if (grupData) {
         var templateArgs = {
-            Epost: postData.posts,
-            Egroup: groupData,
-            title: "CS 290 Final - " + postData.name
-        }
-        res.render('photosPage', templateArgs);
+            Epost: grupData.posts,
+            Egroup: grupData,
+            title: "CS 290 Final - " + grupData.name
+        };
+        res.render('mainPage', templateArgs);
     } else {
         next();
     }
