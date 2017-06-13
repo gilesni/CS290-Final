@@ -6,12 +6,14 @@
     {{/each}}
 </main>
 
-<aside>
-    {{#each groupInfo}}
-        {{> aside}}
-    {{/each}}
+<aside class="groups-sidebar">
+    <div class="group-bubbles-container">
+            {{#each groupInfo}}
+                {{> aside}}
+            {{/each}}
+        </div>
 </aside>
 
-<footer>
+<footer class="text-input-box">
     {{> footer}}
 </footer>
