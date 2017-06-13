@@ -112,11 +112,11 @@ h5 {
 
 .scroll-box {
     flex: auto;
-    overflow-y: auto;
+    overflow-y: scroll;
     max-height: 100%;
     bottom: 45px;
     top: 66px;
-    right: 100px;
+    right: 115px;
     left: 0px;
     position: absolute;
 }
@@ -149,7 +149,6 @@ h5 {
 
 .image-container {
     position: relative;
-    overflow: hidden;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -176,27 +175,41 @@ h5 {
     right: 0px;
     display: block;
     background-color: #393b46;
-    width: 100px;
+    width: 115px;
     height: 95%;
     margin: 0px;
 }
 
 .group-bubbles-container {
-    width: 100px;
+    overflow-y: scroll;
+    width: 115px;
     height: 95%;
     margin: 0px;
 }
 
+.group-bubbles-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.group-bubbles-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.group-bubbles-container::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .group-post {
-  width: 100px;
+  /*width: 100px;
   height: 100px;
   padding: 0px;
   border: 0px;
-  padding-top: 8px;
+  padding-top: 8px;*/
 }
 
 #group-post {
   background: none;
+  height: 100px;
 }
 
 #group-post:focus {
@@ -222,17 +235,15 @@ h5 {
 }
 
 .group-name {
-  font-size: 15px;
+  width: 115px;
+  text-align: center;
   font-weight: 100;
   color: #BEB9B5;
-  /*border: none;*/
 }
 
 .text-input-box {
-    /*border: 2px solid #74828f;*/
     display: flex;
-    /*width: 100%;*/
-    right: 100px;
+    right: 115px;
     left: 0px;
     height: 45px;
     margin: 0px;
