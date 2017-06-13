@@ -32,21 +32,33 @@ app.get('/:group', function (req, res, next) {
     }
 });
 
-app.get('/groups/:group', function (req, res, next) {
-	console.log("== url params for request:", req.params);
-	var group = req.params.group;
-	var grupData = groupData[group];
-	if (grupData) {
-		var templateArgs = {
-			name: grupData.name,
-			photo: grupData.photo,
-			posts: grupData.posts
-		}
-		res.render('???', templateArgs);
-	} else {
-		next();
-	}
+app.get('/:groups/newMessage', function (req, res, next) {
+    var group = groupPosts[req.params.groups];
+    if (group) {
+        if (req.body) {
+
+            var newpost = {
+                url: req.body.url,
+                caption: req.body.text
+            };
+        };
+        group.posts = groups.posts || [];
+
+        group.posts.push(newpost);
+        fs.writeFile('groupPosts.json', JSON.stringify(groupPosts), function (err) {
+            if (err) {
+                res.status(500).send("Unable to save post to \"database\".");
+            } else {
+                res.status(200).send();
+            }
+        });
+
+    } else {
+        res.status(400).send("Person post must have a URL.");
+    }
+
 });
+
 
 app.get('*', function (req, res) {
     res.status(404).render('404Page');
