@@ -63,9 +63,11 @@ function getGroupIDFromLocation() {
 
 function newPost() {
     var userID = document.getElementById('name-button');
-    userID = userID.lastChild.textContent;
-    if (!userID){
-        userID = anonymous;
+    console.log('== userID: ', userID.lastChild.textContent);
+    if (userID.lastChild.textContent == ''){
+        userIDNode = document.createTextNode('Anonymous');
+        userID.appendChild(userIDNode);
+        userID = userID.lastChild.value;
     }
     var textVal = document.getElementById('text-input').value;
     
