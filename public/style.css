@@ -20,11 +20,11 @@ a:focus {
 }
 
 p {
-    margin: 0px 0px 5px;
+  margin: 0px 0px 5px;
 }
 
 h5 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .site-title {
@@ -36,7 +36,7 @@ h5 {
 }
 
 .site-title:hover{
-    color: #c25b56;
+  color: #c25b56;
 }
 
 .navbar {
@@ -181,7 +181,7 @@ h5 {
 }
 
 .group-bubbles-container {
-    display: inline-flex;
+    /*display: inline-flex;*/
     width: 100px;
     height: 95%;
     margin: 0px;
@@ -322,8 +322,6 @@ h5 {
 #post-button:focus {
   outline: none;
 }
-
-
 
 
 /*The login.html */
