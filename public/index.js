@@ -56,8 +56,74 @@ function acceptName() {
     closeNameModal();
 }
 
+function getGroupIDFromLocation() {
+    var pathComponents = window.location.pathname.split('/');
+    return pathComponents[0];
+}
+
+function newPost() {
+    var userID = document.getElementById('name-button');
+    userID = userID.lastChild.textContent;
+    if (!userID){
+        userID = anonymous;
+    }
+    var textVal = document.getElementById('text-input').value;
+    
+    if (textVal) {
+        var groupID = getGroupIDFromLocation();
+        if (groupID) {
+            console.log("== Group ID: ", groupID);
+
+            storeNewPost(groupID, userID, textVal, function (err) {
+                if (err) {
+                    alert("Unable to send message. Error: " + err);
+                } else {
+                    var postTemplate = Handlebars.templates.post;
+                    var templateArgs = {
+                        user: userID,
+                        text: textVal
+                    };
+
+                    var newPostHTML = newPostTemplate(templateArgs);
+
+                    var postContainer = document.querySelector('.scroll-box');
+                    postContainer.insertAdjacentHTML('beforeend', newPostHTML);
+
+                }
+            });
+        }
+
+        var clearText = document.getElementById('text-input');
+        clearText.value = '';
+
+    } else {
+        alert('You must type a message to be sent');
+    }
+}
+
+function storeNewPost(groupID, userID, textVal, callback) {
+    var postURL = "/" + groupID + "/newMessage";
+
+    var postRequest = new XMLHttpRequest();
+    postRequest.open('POST', postURL);
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+
+    postRequest.addEventListener('load', function (event) {
+        var error;
+        if (event.target.status !== 200) {
+            error = event.target.response;
+        }
+        callback(error);
+    });
+
+    var postBody = {
+        url: urlID,
+        text: textVal
+    };
+    postRequest.send(JSON.stringify(postBody));
+}
+
 window.addEventListener('DOMContentLoaded', function () {
-    var name = "Anonymous";
     var checkInButton = document.getElementById('check-in-button');
     checkInButton.addEventListener('click', showNameModal);
     var nameButton = document.getElementById('name-button');
@@ -68,4 +134,6 @@ window.addEventListener('DOMContentLoaded', function () {
     modalCancelButton[0].addEventListener('click', closeNameModal);
     var modalLoginButton = document.getElementsByClassName('modal-login-button');
     modalLoginButton[0].addEventListener('click', acceptName);
+    var postButton = document.getElementById('post-button');
+    postButton.addEventListener('click', newPost);
 });
