@@ -58,7 +58,8 @@ function acceptName() {
 
 function getGroupIDFromLocation() {
     var pathComponents = window.location.pathname.split('/');
-    return pathComponents[0];
+    console.log('==pathComponents[0]: ', pathComponents[0], '==pathComponents[1]: ', pathComponents[1]);
+    return pathComponents[1];
 }
 
 function newPost() {
@@ -85,7 +86,7 @@ function newPost() {
                         user: userID,
                         text: textVal
                     };
-
+                    console.log('== postTemplate: ', postTemplate);
                     var newPostHTML = newPostTemplate(templateArgs);
 
                     var postContainer = document.querySelector('.scroll-box');
@@ -119,7 +120,7 @@ function storeNewPost(groupID, userID, textVal, callback) {
     });
 
     var postBody = {
-        url: urlID,
+        user: userID,
         text: textVal
     };
     postRequest.send(JSON.stringify(postBody));
