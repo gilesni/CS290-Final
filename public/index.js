@@ -58,41 +58,42 @@ function acceptName() {
 
 function getGroupIDFromLocation() {
     var pathComponents = window.location.pathname.split('/');
-    return pathComponents[0];
+    return pathComponents[1];
 }
 
 function newPost() {
     var userID = document.getElementById('name-button');
-    console.log('== userID: ', userID.lastChild.textContent);
-    if (userID.lastChild.textContent == ''){
+    if (userID.lastChild.textContent == '') {
         userIDNode = document.createTextNode('Anonymous');
         userID.appendChild(userIDNode);
-        userID = userID.lastChild.value;
     }
     var textVal = document.getElementById('text-input').value;
-    
     if (textVal) {
+        console.log("two");
         var groupID = getGroupIDFromLocation();
+        if (groupID == '')
+            groupID = 'general'
         if (groupID) {
             console.log("== Group ID: ", groupID);
 
-            storeNewPost(groupID, userID, textVal, function (err) {
+            storeNewPost(groupID, userID.lastChild.textContent, textVal, function (err) {
                 if (err) {
                     alert("Unable to send message. Error: " + err);
                 } else {
                     var postTemplate = Handlebars.templates.post;
                     var templateArgs = {
-                        user: userID,
+                        user: userID.lastChild.textContent,
                         text: textVal
                     };
-
-                    var newPostHTML = newPostTemplate(templateArgs);
+                    console.log("three")
+                    var newPostHTML = postTemplate(templateArgs);
 
                     var postContainer = document.querySelector('.scroll-box');
                     postContainer.insertAdjacentHTML('beforeend', newPostHTML);
 
                 }
             });
+
         }
 
         var clearText = document.getElementById('text-input');
@@ -104,12 +105,12 @@ function newPost() {
 }
 
 function storeNewPost(groupID, userID, textVal, callback) {
+    console.log("Store function reached.");
     var postURL = "/" + groupID + "/newMessage";
 
     var postRequest = new XMLHttpRequest();
     postRequest.open('POST', postURL);
     postRequest.setRequestHeader('Content-Type', 'application/json');
-
     postRequest.addEventListener('load', function (event) {
         var error;
         if (event.target.status !== 200) {
@@ -119,10 +120,12 @@ function storeNewPost(groupID, userID, textVal, callback) {
     });
 
     var postBody = {
-        url: urlID,
+        user: userID,
         text: textVal
     };
+    console.log("postBody: ", JSON.stringify(postBody));
     postRequest.send(JSON.stringify(postBody));
+
 }
 
 window.addEventListener('DOMContentLoaded', function () {
