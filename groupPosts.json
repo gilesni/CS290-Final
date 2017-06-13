@@ -1,0 +1,50 @@
+{
+  "general": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "General is now open"
+      }
+    ]
+  },
+  "news": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "News is now open"
+      }
+    ]
+  },
+  "movies": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Movies is now open"
+      }
+    ]
+  },
+  "shows": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Shows is now open"
+      }
+    ]
+  },
+  "video-games": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Video Games is now open"
+      }
+    ]
+  },
+  "board-games": {
+    "posts": [
+      {
+        "user": "The Developers",
+        "text": "Board Games is now open"
+      }
+    ]
+  }
+}
